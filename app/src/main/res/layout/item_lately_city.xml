@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/back_gray2"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="26dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:text="最近访问的城市"
+        android:textColor="@color/text1"
+        android:textSize="17sp"/>
+
+    <!-- 如果一个都无，则gone掉，如果不到三个，则invisible掉剩余的
+   如果只有一个，直接visible此就可以了-->
+    <LinearLayout
+        android:id="@+id/lately_city"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/biankuang"
+            android:gravity="center"
+            android:text="广州"
+            android:textColor="@color/common_text"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/biankuang"
+            android:textColor="@color/common_text"
+            android:textSize="16sp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/biankuang"
+            android:textColor="@color/common_text"
+            android:textSize="16sp"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+</LinearLayout>

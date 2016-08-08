@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前："
+            android:textColor="@color/black1"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/tv_current_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="广州"
+            android:textColor="@color/black1"
+            android:textSize="17sp"/>
+
+        <TextView
+            android:id="@+id/tv_select_county"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableRight="@mipmap/down"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="选择县区"
+            android:textColor="@color/text1"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/white"
+        android:src="@mipmap/sso_load_icon"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_no_county"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="本城市无区县"
+        android:textColor="@color/common_text"
+        android:textSize="17sp"
+        android:visibility="gone"/>
+
+    <!-- 代码里动态添加 使用s_hot_city-->
+    <LinearLayout
+        android:id="@+id/county"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loading"
+        android:layout_marginRight="26dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>
